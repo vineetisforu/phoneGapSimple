@@ -6,6 +6,7 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
+    var myArray = ['Mast hai na', 'Kaisa laga?', 'Maza aaya na?', 'This is bhaukaalzzz. . .', 'sahi hai na. . .'];
     // Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -24,7 +25,8 @@
     //
     function onSuccess(position) {
         var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br>' +
+        element.innerHTML = myArray[Math.floor(Math.random() * myArray.length)] + '<br>'
+			    'Latitude: '  + position.coords.latitude      + '<br>' +
                             'Longitude: ' + position.coords.longitude     + '<br>' +
 			    'Altitude: '          + position.coords.altitude          + '<br>' +
 			    'Accuracy: '          + position.coords.accuracy          + '<br>' +
